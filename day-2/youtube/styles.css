@@ -1,17 +1,21 @@
-* {
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
     color: white;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 :root {
-    --side-bar-width: 30vh;
+    --side-bar-width: 25vh;
     --top-nav-width: 56px;
     --items-per-row: 3;
   }
 
-  body {
+body {
     background-color: black;
-  }
+}
 
 .sidebar {
     border: 3px solid blue;
@@ -22,13 +26,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .sidebar a {
     text-decoration: none;
     color: white;
-    margin: 15px;
+    margin: 8px;
+    font-size: small;
 }
 
 #find-video {
