@@ -3,15 +3,26 @@
     /* declare global variables for reuse in the program */
     --side-bar-width: 150px;
     --top-nav-height: 56px;
+    --items-per-row: 3;
 }
+
 
 
 .gallery {
     border: 3px solid green;
     margin-left: var(--side-bar-width);
     margin-top: var(--top-nav-height);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery section {
+    margin: 5px;
+    /** calculate the width to get 3 on a row **/
+    width:  calc((100vw - var(--side-bar-width)) / var(--items-per-row))
 }
 
 .nav-container {
