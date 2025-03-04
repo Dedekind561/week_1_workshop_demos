@@ -1,0 +1,32 @@
+
+:root {
+    /* declare global variables for reuse in the program */
+    --side-bar-width: 150px;
+    --top-nav-height: 56px;
+}
+
+
+.gallery {
+    border: 3px solid green;
+    margin-left: var(--side-bar-width);
+    margin-top: var(--top-nav-height);
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-container {
+    border: 3px solid red;
+    height: var(--top-nav-height);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.side-container {
+    border: 3px solid blue;
+    position: fixed;
+    height: 100%;
+    width: var(--side-bar-width);
+    top: var(--top-nav-height);
+/**  100% of the parent element  **/
+}
