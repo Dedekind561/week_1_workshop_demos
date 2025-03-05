@@ -1,4 +1,4 @@
-export default function getData() {
+function getData() {
     return [
       {
         _id: '612fa98be775ce5e34e216b8',
@@ -2053,5 +2053,5 @@ export default function getData() {
         favoriteFruit: 'apple'
       }
     ]
-  }
+}
   
