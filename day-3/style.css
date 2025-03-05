@@ -2,4 +2,9 @@
 
 .user-card {
     border: 1px solid black;
+    padding: 30px;
+}
+
+.main-gallery {
+    display: flex;
 }
