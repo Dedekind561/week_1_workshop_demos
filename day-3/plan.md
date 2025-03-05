@@ -1,4 +1,4 @@
-## 🗺️ Plan
+## 🗺️ Plan - Day 3
 
 - Setup TS with the HTML, CSS & JSS so we have a workflow 
 - Render one piece of data in the UI
