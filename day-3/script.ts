@@ -3,28 +3,33 @@ import getData from './data.js';
 
 
 const data = getData();
-const [user] = data;
+const [user,user2] = data;
 
 
 // bring in the getData function and check we can access data (done)
 // start creating a user card in the UI
 
-// retrieve the gallery element
-// append section to the gallery element
-
 const gallery = document.querySelector('.main-gallery');
 
+interface UserInfo {
+    name: string
+}
+
+function createUserCard({name}: UserInfo) {
 // create a section element
-const section = document.createElement('section');
+    const section = document.createElement('section');
 
 
-// create a heading element
-const heading = document.createElement('h2');
-heading.innerText = `Name: ${user.name}`;
-section.appendChild(heading);
+    // create and add heading to the section element
+    const heading = document.createElement('h2');
+    heading.innerText = `Name: ${name}`;
+    section.appendChild(heading);
 
-// give the section element a class
-section.classList.add('user-card');
+    // give the section element a class
+    section.classList.add('user-card');
+    return section;
+}
 
+const userCard = createUserCard(data[5]);
 // attach user card section to the gallery
-gallery!.appendChild(section);
+gallery!.appendChild(userCard);
