@@ -1,7 +1,7 @@
 
+import getData from './data.js';
 
-console.log('hello world!')
 
-
-const firstName:string = 'Mitch';
-console.log(`Hello my name is ${firstName}`);
+const output = getData();
+console.log(output)
+// bring in the getData function and check we can access data

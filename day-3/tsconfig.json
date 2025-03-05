@@ -9,6 +9,6 @@
     "strict": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["./script.ts"],
+  "include": ["./*.ts"],
   "exclude": ["node_modules"]
 }

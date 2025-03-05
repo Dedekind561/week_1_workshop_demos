@@ -1,4 +1,4 @@
-function getData() {
+export default function getData() {
     return [
       {
         _id: '612fa98be775ce5e34e216b8',
