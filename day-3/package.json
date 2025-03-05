@@ -1,0 +1,17 @@
+{
+  "name": "day-3",
+  "version": "1.0.0",
+  "main": "data.js",
+  "scripts": {
+    "compile:watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.8.2"
+  }
+}
