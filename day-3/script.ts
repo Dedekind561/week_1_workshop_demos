@@ -26,4 +26,10 @@ function createUserCard({name}: UserInfo) {
 }
 
 const userCard = createUserCard(data[5]);
-gallery!.appendChild(userCard);
+
+
+// transform the user data into an array of user card
+// map through the user data into user cards
+
+const userCards = data.map(createUserCard);
+gallery!.append(...userCards);
