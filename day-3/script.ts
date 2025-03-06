@@ -6,8 +6,12 @@ interface UserInfo {
 }
 
 const data = getData();
-const [user,user2] = data;
 const gallery = document.querySelector('.main-gallery');
+
+const state = {
+    searchInput: ''
+}
+// state means data that the UI depends on
 
 
 function createUserCard({name}: UserInfo) {
@@ -25,11 +29,30 @@ function createUserCard({name}: UserInfo) {
     return section;
 }
 
-const userCard = createUserCard(data[5]);
-
-
+// filter users based on their user name
 // transform the user data into an array of user card
 // map through the user data into user cards
 
-const userCards = data.map(createUserCard);
-gallery!.append(...userCards);
+function renderUserCards() {
+    
+    // find all the existing sections and remove them
+    document.querySelectorAll('section').forEach(section => {
+        section.remove();
+    })
+
+    const userCards = data
+        .filter((user) => user.name.includes(state.searchInput))
+        .map(createUserCard);
+
+    gallery!.append(...userCards); // append another 500 again
+}
+
+const input = document.querySelector('input')
+input?.addEventListener('change',function(event) {
+
+    state.searchInput = event.target?.value;
+
+    renderUserCards();
+});
+
+renderUserCards(); // initally append 500 users
