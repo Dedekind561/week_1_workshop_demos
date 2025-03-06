@@ -44,15 +44,16 @@ function renderUserCards() {
         .filter((user) => user.name.includes(state.searchInput))
         .map(createUserCard);
 
-    gallery!.append(...userCards); // append another 500 again
+    gallery!.append(...userCards);
 }
 
-const input = document.querySelector('input')
-input?.addEventListener('change',function(event) {
+const input = document.querySelector('input');
+const searchBtn = document.querySelector('.user-search');
+searchBtn.addEventListener('click',function(event) {
 
-    state.searchInput = event.target?.value;
+    state.searchInput = input?.value;
 
     renderUserCards();
 });
 
-renderUserCards(); // initally append 500 users
+renderUserCards();
