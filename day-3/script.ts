@@ -3,26 +3,46 @@ import getData from './data.js';
 
 interface UserInfo {
     name: string
+    email: string
+    picture: string
 }
 
-const data = getData();
-const gallery = document.querySelector('.main-gallery');
 
-const state = {
+const data = getData();
+const gallery = document.querySelector('.gallery');
+
+const state= {
     searchInput: ''
 }
 // state means data that the UI depends on
 
 
-function createUserCard({name}: UserInfo) {
+function createUserCard({name, email,picture}: UserInfo) {
 // create a section element
     const section = document.createElement('section');
 
 
     // create and add heading to the section element
     const heading = document.createElement('h2');
-    heading.innerText = `Name: ${name}`;
+    heading.innerText = `${name}`;
     section.appendChild(heading);
+
+    const img = document.createElement('img');
+    img.src = picture;
+    section.appendChild(img)
+
+    const p = document.createElement('p');
+    p.innerText = `Email: ${email}
+    
+    x
+    y
+    x
+    a
+    cv
+    `;
+    section.appendChild(p);
+
+
 
     // give the section element a class
     section.classList.add('user-card');
@@ -49,11 +69,13 @@ function renderUserCards() {
 
 const input = document.querySelector('input');
 const searchBtn = document.querySelector('.user-search');
-searchBtn.addEventListener('click',function(event) {
-
-    state.searchInput = input?.value;
-
-    renderUserCards();
-});
+if (searchBtn) {
+    searchBtn.addEventListener('click',function(event) {
+    
+        state.searchInput = input?.value || '';
+        
+        renderUserCards();
+    });
+}
 
 renderUserCards();

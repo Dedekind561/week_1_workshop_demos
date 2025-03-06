@@ -1,12 +1,64 @@
 
 
+body {
+  font-family: "Poppins", sans-serif;;
+}
+
 .user-card {
     border: 1px solid black;
     padding: 30px;
+    width: calc((100% - 60px) / 3);
+    box-sizing: border-box;
+}
+
+img {
+  width: 100%
 }
 
 .main-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: left;
+    align-items: right;;
+    width: 80vw;
 }
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 100px auto;
+  grid-template-areas: 
+  "header header"
+  "side main";
+}
+
+input { 
+  height: 40%;
+  width: 300px;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  grid-area: main;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.sidebar {
+  grid-area: side;
+  justify-content: left;
+  border: 1px solid blue;
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+
