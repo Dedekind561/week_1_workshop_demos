@@ -1,7 +1,9 @@
-## 🗺️ Plan - Day 3
+## 🗺️ Plan - Day 4 - Using events
+
+Goal: Allow an end-user to search/filter the gallery of users
 
 
-- Clarify the meaning of the DOM
-- Setup TS with the HTML, CSS & JSS so we have a workflow 
-- Render a single user in the UI
-- Refactor the code to use a template
+- Render all the users it the gallery
+- Store state for the search input
+- Filter the user cards based on the search input (update search input manually)
+- Now show to update the search input
